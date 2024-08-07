@@ -7,13 +7,13 @@ const app = express();
 const server = http.createServer(app);
 const io = require('socket.io')(server, {
   cors: {
-    origin: "http://localhost:3000", // Replace with your frontend URL
+    origin: "https://tic-tac-toe-test.onrender.com", // Replace with your frontend URL
     methods: ["GET", "POST"]
   }
 });
 
 app.use(cors({
-  origin: 'http://localhost:3000' // Replace with your frontend URL
+  origin: 'https://tic-tac-toe-test.onrender.com' // Replace with your frontend URL
 }));
 app.use(express.json());
 
